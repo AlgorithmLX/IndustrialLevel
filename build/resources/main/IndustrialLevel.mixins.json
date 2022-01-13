@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.paperteam.industriallevel.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "industrialtools.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "tt ",
+        "t/c",
+        " / "
+    ],
+    "key": {
+        "t": {
+            "item": "industriallevel:titanium_ingot"
+        },
+        "/": {
+            "item": "industriallevel:titanium_stick"
+        },
+        "c": {
+            "item": "minecraft:copper_ingot"
+        }
+    },
+    "result": {
+        "item": "industriallevel:titanium_electro_axe",
+        "count": 1
+    }
+}

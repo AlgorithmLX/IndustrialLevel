@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ttc",
+        " /t",
+        "/ t"
+    ],
+    "key": {
+        "t": {
+            "item": "industriallevel:titanium_ingot"
+        },
+        "c": {
+            "item": "minecraft:copper_ingot"
+        },
+        "/": {
+            "item": "industriallevel:titanium_stick"
+        }
+    },
+    "result": {
+        "item": "industriallevel:titanium_electro_hammer",
+        "count": 1
+    }
+}

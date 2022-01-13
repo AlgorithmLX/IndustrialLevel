@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "industriallevel:block/coal_power_generator_top",
+    "front": "industriallevel:block/coal_power_generator_front_on",
+    "side": "industriallevel:block/coal_power_generator_side",
+    "down": "industriallevel:block/coal_power_generator_down"
+  }
+}

@@ -1,0 +1,125 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net' }
+        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.spongepowered.mixin'
+
+String industriallevel_version = "${mc_version}-${version_mod}"
+String forge_dependency = "${mc_version}-${forge_ver}"
+
+group = project.mod_package
+version = industriallevel_version
+
+
+java {
+    archivesBaseName = "${mod_project_name}"
+    toolchain.languageVersion = JavaLanguageVersion.of(java_version)
+}
+
+minecraft {
+    mappings channel: project.mappings_channel, version: project.mc_version
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                industriallevel {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                industriallevel {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        data {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            args '--mod', 'industriallevel', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+
+            mods {
+                industriallevel {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+repositories {
+    // flatDir {
+    //     dir 'api'
+    // }
+//    maven {
+//        name = "Progwml6 maven"
+//        url = "https://dvs1.progwml6.com/files/maven/"
+//    }
+//    maven {
+//        name = "ModMaven"
+//        url = "https://modmaven.k-4u.nl"
+//    }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${forge_dependency}"
+
+    // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
+//    implementation fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
+//    implementation fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
+
+
+
+    annotationProcessor 'org.spongepowered:mixin:0.8:processor'
+}
+
+jar {
+    manifest {
+        attributes([
+                "Specification-Title"     : "IndustrialLevel",
+                "Specification-Vendor"    : "PaperTeam",
+                "Specification-Version"   : "1",
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.jar.archiveVersion,
+                "Implementation-Vendor"   : "PaperTeam",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}
+
+jar.finalizedBy('reobfJar')
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile){
+    options.encoding = 'UTF-8'
+}

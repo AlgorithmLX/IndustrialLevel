@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "industriallevel:block/end_titanium_ore"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "industriallevel:block/coal_power_generator"
+      }
+    },
+    {
+      "when": {
+        "powered": "false"
+      },
+      "apply": {
+        "model": "industriallevel:block/coal_power_generator"
+      }
+    },
+    {
+      "when": {
+        "powered": "false"
+      },
+      "apply": {
+        "model": "industriallevel:block/coal_power_generator",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "powered": "false"
+      },
+      "apply": {
+        "model": "industriallevel:block/coal_power_generator",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "powered": "false"
+      },
+      "apply": {
+        "model": "industriallevel:block/coal_power_generator",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "powered": "false"
+      },
+      "apply": {
+        "model": "industriallevel:block/coal_power_generator",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "powered": "false"
+      },
+      "apply": {
+        "model": "industriallevel:block/coal_power_generator",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "powered": "true"
+      },
+      "apply": {
+        "model": "industriallevel:block/coal_power_generator_on"
+      }
+    },
+    {
+      "when": {
+        "powered": "true"
+      },
+      "apply": {
+        "model": "industriallevel:block/coal_power_generator_on",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "powered": "true"
+      },
+      "apply": {
+        "model": "industriallevel:block/coal_power_generator_on",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "powered": "true"
+      },
+      "apply": {
+        "model": "industriallevel:block/coal_power_generator_on",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "powered": "true"
+      },
+      "apply": {
+        "model": "industriallevel:block/coal_power_generator_on",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "powered": "true"
+      },
+      "apply": {
+        "model": "industriallevel:block/coal_power_generator_on",
+        "x": 90,
+        "y": 270
+      }
+    }
+  ]
+}

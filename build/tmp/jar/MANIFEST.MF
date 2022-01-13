@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: IndustrialTools
+Specification-Vendor: PaperTeam
+Specification-Version: 1
+Implementation-Title: IndustrialTools
+Implementation-Version: 1.18.1-1.0.0
+Implementation-Vendor: PaperTeam
+Implementation-Timestamp: 2021-12-15T18:05:42+0800
+

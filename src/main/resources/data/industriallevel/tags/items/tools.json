@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "industriallevel:titanium_electro_pickaxe",
+    "industriallevel:titanium_electro_hammer",
+    "industriallevel:titanium_electro_sword",
+    "industriallevel:titanium_electro_axe",
+    "industriallevel:titanium_electro_shovel"
+  ]
+}
